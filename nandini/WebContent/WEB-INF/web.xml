@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>nandini</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ClassCalculation</display-name>
+    <servlet-name>ClassCalculation</servlet-name>
+    <servlet-class>com.nandini.ClassCalculation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClassCalculation</servlet-name>
+    <url-pattern>/ClassCalculation</url-pattern>
+     <url-pattern>/getResult</url-pattern>
+      <url-pattern>/getOptionValue</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ExistedResult</display-name>
+    <servlet-name>ExistedResult</servlet-name>
+    <servlet-class>com.nandini.ExistedResult</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExistedResult</servlet-name>
+    <url-pattern>/ExistedResult</url-pattern>
+  </servlet-mapping>
+</web-app>

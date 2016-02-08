@@ -1,0 +1,1000 @@
+<html>
+<head>
+<title>Nandini</title>
+<meta name="viewport" content="width=device-width">
+<style>
+.btn-primary {
+	border-color: #FF432E;
+	background-color: #FeFeFe;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-decoration: none;
+	font-family: cursive;
+	font-size-adjust: inherit;
+	margin-bottom: 10ex;
+	margin-bottom: 26px;
+}
+
+.btn-primary:hover {
+	border-color: #ccffff;
+	background-color: #ccffff;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-style: oblique;
+}
+
+#infinity {
+	position: relative;
+	width: 5px;
+	height: 5px;
+	-webkit-animation: spin 4s linear infinite;
+	-moz-animation: spin 4s linear infinite;
+	animation: spin 4s linear infinite;
+}
+
+@
+-moz-keyframes spin { 100% {
+	-moz-transform: rotate(360deg);
+}
+
+}
+@
+-webkit-keyframes spin { 100% {
+	-webkit-transform: rotate(360deg);
+}
+
+}
+@
+keyframes spin { 100% {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+}
+#infinity:before, #infinity:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	border: 20px solid red;
+	-moz-border-radius: 50px 50px 0 50px;
+	border-radius: 50px 50px 0 50px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#infinity:after {
+	left: auto;
+	right: 0;
+	-moz-border-radius: 50px 50px 50px 0;
+	border-radius: 50px 50px 50px 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+@
+-moz-keyframes spin { 100% {
+	-moz-transform: rotate(360deg);
+}
+
+}
+@
+-webkit-keyframes spin { 100% {
+	-webkit-transform: rotate(360deg);
+}
+
+}
+@
+keyframes spin { 100% {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+}
+body {
+	background-color: skyblue;
+}
+
+table tr:nth-child(even) {
+	background: skyblue;
+}
+
+table td:nth-child(odd) {
+	background: white;
+}
+
+table th {
+	background: #11fff0;
+}
+
+.hoverTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.hoverTable td {
+	padding: 7px;
+	border: #ccffff 1px solid;
+}
+/* Define the default color for all the table rows */
+.hoverTable tr {
+	background: #b8d1f3;
+}
+/* Define the hover highlight color for the table row */
+.hoverTable tr:hover {
+	background-color: #ccffff;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table th {
+	font-color: white;
+	font-size: 27;
+}
+
+.btn-primary {
+	border-color: #FF432E;
+	background-color: #FF432E;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.btn-primary:hover {
+	border-color: white;
+	background-color: white;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+th {
+	font-size: medium;
+	font-family: cursive;
+	font-weight: normal;
+	font-size: medium;
+}
+
+@
+-webkit-keyframes rotate {from { -webkit-transform:rotate(0deg);
+	
+}
+
+to {
+	-webkit-transform: rotate(180deg);
+}
+
+}
+img.star {
+	-webkit-animation-name: rotate;
+	-webkit-animation-duration: 0.2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+</style>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="non.js" type="text/javascript"></script>
+<body>
+
+
+	<a class="btn-primary" href="getResult?mode=getResult">Get Your
+		Previous Calculation</a>
+	<br>
+	<br>
+	<br>
+	<table align="center" class="hoverTable">
+		<tr>
+			<th>S.no</th>
+			<th>Items</th>
+			<th id="mor">Morning</th>
+			<th id="after">After Non</th>
+			<th id="even">Evening</th>
+			<th id="stock">O Stock</th>
+			<th id="rate">Rate</th>
+			<th id="amount">Amount</th>
+		<tr id="some">
+		<tr>
+			<td>1</td>
+			<td>T.M.Ltr</td>
+			<td><input type="text" id="mor1" /></td>
+			<td><input type="text" id="af1" /></td>
+			<td><input type="text" id="ev1" /></td>
+			<td><input type="text" id="ost1" /></td>
+			<td id="r1">31.60</td>
+			<td id="o1">0.00</td>
+		</tr>
+		<tr>
+		<tr>
+			<td>2</td>
+			<td>T.M.Off</td>
+			<td><input type="text" id="mor2" /></td>
+			<td><input type="text" id="af2" /></td>
+			<td><input type="text" id="ev2" /></td>
+			<td><input type="text" id="ost2" /></td>
+			<td id="r2">16.28</td>
+			<td id="o2">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+		<tr>
+			<td>3</td>
+			<td>Std.Ltr.</td>
+			<td><input type="text" id="mor3" /></td>
+			<td><input type="text" id="af3" /></td>
+			<td><input type="text" id="ev3" /></td>
+			<td><input type="text" id="ost3" /></td>
+			<td id="r3">37.34</td>
+			<td id="o3">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+		<tr>
+			<td>4</td>
+			<td>Std.Off</td>
+			<td><input type="text" id="mor4" /></td>
+			<td><input type="text" id="af4" /></td>
+			<td><input type="text" id="ev4" /></td>
+			<td><input type="text" id="ost4" /></td>
+			<td id="r4">19.15</td>
+			<td id="o4">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+		<tr>
+			<td>5</td>
+			<td>H.S.M .Ltr.</td>
+			<td><input type="text" id="mor5" /></td>
+			<td><input type="text" id="af5" /></td>
+			<td><input type="text" id="ev5" /></td>
+			<td><input type="text" id="ost5" /></td>
+			<td id="r5">38.30</td>
+			<td id="o5">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+		<tr>
+			<td>6</td>
+			<td>H.S.M. Off</td>
+			<td><input type="text" id="mor6" /></td>
+			<td><input type="text" id="af6" /></td>
+			<td><input type="text" id="ev6" /></td>
+			<td><input type="text" id="ost6" /></td>
+			<td id="r6">19.15</td>
+			<td id="o6">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+		<tr>
+			<td>7</td>
+			<td>Curd . Off</td>
+			<td><input type="text" id="mor7" /></td>
+			<td><input type="text" id="af7" /></td>
+			<td><input type="text" id="ev7" /></td>
+			<td><input type="text" id="ost7" /></td>
+			<td id="r7">18.40</td>
+			<td id="o7">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+		<tr>
+			<td>8</td>
+			<td>Curd 200MI</td>
+			<td><input type="text" id="mor8" /></td>
+			<td><input type="text" id="af8" /></td>
+			<td><input type="text" id="ev8" /></td>
+			<td><input type="text" id="ost8" /></td>
+			<td id="r8">8.28</td>
+			<td id="o8">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>B.T.M</td>
+			<td><input type="text" id="mor9" /></td>
+			<td><input type="text" id="af9" /></td>
+			<td><input type="text" id="ev9" /></td>
+			<td><input type="text" id="ost9" /></td>
+			<td id="r9">4.25</td>
+			<td id="o9">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>GHEE. litr</td>
+			<td><input type="text" id="mor10" /></td>
+			<td><input type="text" id="af10" /></td>
+			<td><input type="text" id="ev10" /></td>
+			<td><input type="text" id="ost10" /></td>
+			<td id="r10">350.00</td>
+			<td id="o10">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>GHEE. 500 M.I</td>
+			<td><input type="text" id="mor11" /></td>
+			<td><input type="text" id="af11" /></td>
+			<td><input type="text" id="ev11" /></td>
+			<td><input type="text" id="ost11" /></td>
+			<td id="r11">174.00</td>
+			<td id="o11">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>GHEE. 200 M.I</td>
+			<td><input type="text" id="mor12" /></td>
+			<td><input type="text" id="af12" /></td>
+			<td><input type="text" id="ev12" /></td>
+			<td><input type="text" id="ost12" /></td>
+			<td id="r12">71.10</td>
+			<td id="o12">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>GHEE. 100 M.I</td>
+			<td><input type="text" id="mor13" /></td>
+			<td><input type="text" id="af13" /></td>
+			<td><input type="text" id="ev13" /></td>
+			<td><input type="text" id="ost13" /></td>
+			<td id="r13">36.90</td>
+			<td id="o13">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>GHEE. 50 M.I</td>
+			<td><input type="text" id="mor14" /></td>
+			<td><input type="text" id="af14" /></td>
+			<td><input type="text" id="ev14" /></td>
+			<td><input type="text" id="ost14" /></td>
+			<td id="r14">19.80</td>
+			<td id="o14">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>GHEE .PPJ 1000MI</td>
+			<td><input type="text" id="mor15" /></td>
+			<td><input type="text" id="af15" /></td>
+			<td><input type="text" id="ev15" /></td>
+			<td><input type="text" id="ost15" /></td>
+			<td id="r15">355.50</td>
+			<td id="o15">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>GHEE .PPJ 500MI</td>
+			<td><input type="text" id="mor16" /></td>
+			<td><input type="text" id="af16" /></td>
+			<td><input type="text" id="ev16" /></td>
+			<td><input type="text" id="ost16" /></td>
+			<td id="r16">183.60</td>
+			<td id="o16">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>GHEE .PPJ 200MI</td>
+			<td><input type="text" id="mor17" /></td>
+			<td><input type="text" id="af17" /></td>
+			<td><input type="text" id="ev17" /></td>
+			<td><input type="text" id="ost17" /></td>
+			<td id="r17">77.40</td>
+			<td id="o17">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>Peda 250 G.ms</td>
+			<td><input type="text" id="mor18" /></td>
+			<td><input type="text" id="af18" /></td>
+			<td><input type="text" id="ev18" /></td>
+			<td><input type="text" id="ost18" /></td>
+			<td id="r18">62.50</td>
+			<td id="o18">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>Peda 100 G.ms</td>
+			<td><input type="text" id="mor19" /></td>
+			<td><input type="text" id="af19" /></td>
+			<td><input type="text" id="ev19" /></td>
+			<td><input type="text" id="ost19" /></td>
+			<td id="r19">26.79</td>
+			<td id="o19">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>Peda 10 G.ms</td>
+			<td><input type="text" id="mor20" /></td>
+			<td><input type="text" id="af20" /></td>
+			<td><input type="text" id="ev20" /></td>
+			<td><input type="text" id="ost20" /></td>
+			<td id="r20">8.04</td>
+			<td id="o20">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td>Mysore Pk. 10Gms</td>
+			<td><input type="text" id="mor21" /></td>
+			<td><input type="text" id="af21" /></td>
+			<td><input type="text" id="ev21" /></td>
+			<td><input type="text" id="ost21" /></td>
+			<td id="r21">9.10</td>
+			<td id="o21">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td>Mysore Pk. 250Gms</td>
+			<td><input type="text" id="mor22" /></td>
+			<td><input type="text" id="af22" /></td>
+			<td><input type="text" id="ev22" /></td>
+			<td><input type="text" id="ost22" /></td>
+			<td id="r22">76.00</td>
+			<td id="o22">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>23</td>
+			<td>S.F.M</td>
+			<td><input type="text" id="mor23" /></td>
+			<td><input type="text" id="af23" /></td>
+			<td><input type="text" id="ev23" /></td>
+			<td><input type="text" id="ost23" /></td>
+			<td id="r23">17.02</td>
+			<td id="o23">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>24</td>
+			<td>D.Peda</td>
+			<td><input type="text" id="mor24" /></td>
+			<td><input type="text" id="af24" /></td>
+			<td><input type="text" id="ev24" /></td>
+			<td><input type="text" id="ost24" /></td>
+			<td id="r24">62.50</td>
+			<td id="o24">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>25</td>
+			<td>Kunada @R</td>
+			<td><input type="text" id="mor25" /></td>
+			<td><input type="text" id="af25" /></td>
+			<td><input type="text" id="ev25" /></td>
+			<td><input type="text" id="ost25" /></td>
+			<td id="r25">63.00</td>
+			<td id="o25">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>26</td>
+			<td>B.P 500gms</td>
+			<td><input type="text" id="mor26" /></td>
+			<td><input type="text" id="af26" /></td>
+			<td><input type="text" id="ev26" /></td>
+			<td><input type="text" id="ost26" /></td>
+			<td id="r26">133.93</td>
+			<td id="o26">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>27</td>
+			<td>B.P 200gms</td>
+			<td><input type="text" id="mor27" /></td>
+			<td><input type="text" id="af27" /></td>
+			<td><input type="text" id="ev27" /></td>
+			<td><input type="text" id="ost27" /></td>
+			<td id="r27">53.97</td>
+			<td id="o27">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>28</td>
+			<td>B.P 10gms</td>
+			<td><input type="text" id="mor28" /></td>
+			<td><input type="text" id="af28" /></td>
+			<td><input type="text" id="ev28" /></td>
+			<td><input type="text" id="ost28" /></td>
+			<td id="r28">3.57</td>
+			<td id="o28">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>29</td>
+			<td>Jamun Mix 200 Gms</td>
+			<td><input type="text" id="mor29" /></td>
+			<td><input type="text" id="af29" /></td>
+			<td><input type="text" id="ev29" /></td>
+			<td><input type="text" id="ost29" /></td>
+			<td id="r29">63.00</td>
+			<td id="o29">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>30</td>
+			<td>P Mix</td>
+			<td><input type="text" id="mor30" /></td>
+			<td><input type="text" id="af30" /></td>
+			<td><input type="text" id="ev30" /></td>
+			<td><input type="text" id="ost30" /></td>
+			<td id="r30">49.50</td>
+			<td id="o30">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>31</td>
+			<td>Cove Jamun</td>
+			<td><input type="text" id="mor31" /></td>
+			<td><input type="text" id="af31" /></td>
+			<td><input type="text" id="ev31" /></td>
+			<td><input type="text" id="ost31" /></td>
+			<td id="r31">80.36</td>
+			<td id="o31">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>32</td>
+			<td>Rasgulla</td>
+			<td><input type="text" id="mor32" /></td>
+			<td><input type="text" id="af32" /></td>
+			<td><input type="text" id="ev32" /></td>
+			<td><input type="text" id="ost32" /></td>
+			<td id="r32">75.90</td>
+			<td id="o32">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>33</td>
+			<td>cashiw Barfi</td>
+			<td><input type="text" id="mor33" /></td>
+			<td><input type="text" id="af33" /></td>
+			<td><input type="text" id="ev33" /></td>
+			<td><input type="text" id="ost33" /></td>
+			<td id="r33">133.93</td>
+			<td id="o33">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>34</td>
+			<td>D fts,Barfi</td>
+			<td><input type="text" id="mor34" /></td>
+			<td><input type="text" id="af34" /></td>
+			<td><input type="text" id="ev34" /></td>
+			<td><input type="text" id="ost34" /></td>
+			<td id="r34">133.95</td>
+			<td id="o34">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>35</td>
+			<td>Cocnt. Barfi</td>
+			<td><input type="text" id="mor35" /></td>
+			<td><input type="text" id="af35" /></td>
+			<td><input type="text" id="ev35" /></td>
+			<td><input type="text" id="ost35" /></td>
+			<td id="r35">80.36</td>
+			<td id="o35">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>36</td>
+			<td>Bite</td>
+			<td><input type="text" id="mor36" /></td>
+			<td><input type="text" id="af36" /></td>
+			<td><input type="text" id="ev36" /></td>
+			<td><input type="text" id="ost36" /></td>
+			<td id="r36">7.10</td>
+			<td id="o36">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>37</td>
+			<td>Kunda</td>
+			<td><input type="text" id="mor37" /></td>
+			<td><input type="text" id="af37" /></td>
+			<td><input type="text" id="ev37" /></td>
+			<td><input type="text" id="ost37" /></td>
+			<td id="r37">70.00</td>
+			<td id="o37">0.00</td>
+		</tr>
+		</tr>
+		<tr>
+			<td>38</td>
+			<td>Basan Lalddu</td>
+			<td><input type="text" id="mor38" /></td>
+			<td><input type="text" id="af38" /></td>
+			<td><input type="text" id="ev38" /></td>
+			<td><input type="text" id="ost38" /></td>
+			<td id="r38">71.43</td>
+			<td id="o38">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>39</td>
+			<td>Pannir 100Gms.</td>
+			<td><input type="text" id="mor39" /></td>
+			<td><input type="text" id="af39" /></td>
+			<td><input type="text" id="ev39" /></td>
+			<td><input type="text" id="ost39" /></td>
+			<td id="r39">232.14</td>
+			<td id="o39">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>40</td>
+			<td>Pannir 200Gms.</td>
+			<td><input type="text" id="mor40" /></td>
+			<td><input type="text" id="af40" /></td>
+			<td><input type="text" id="ev40" /></td>
+			<td><input type="text" id="ost40" /></td>
+			<td id="r40">47.83</td>
+			<td id="o40">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>41</td>
+			<td>Goodlife 500 M. I.</td>
+			<td><input type="text" id="mor41" /></td>
+			<td><input type="text" id="af41" /></td>
+			<td><input type="text" id="ev41" /></td>
+			<td><input type="text" id="ost41" /></td>
+			<td id="r41">20.26</td>
+			<td id="o41">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>42</td>
+			<td>Goodlife 200 M. I.</td>
+			<td><input type="text" id="mor42" /></td>
+			<td><input type="text" id="af42" /></td>
+			<td><input type="text" id="ev42" /></td>
+			<td><input type="text" id="ost42" /></td>
+			<td id="r42">9</td>
+			<td id="o42">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+
+
+
+
+		<tr>
+			<td>43</td>
+			<td>Goodlife Slim.</td>
+			<td><input type="text" id="mor43" /></td>
+			<td><input type="text" id="af43" /></td>
+			<td><input type="text" id="ev43" /></td>
+			<td><input type="text" id="ost43" /></td>
+			<td id="r43">18.44</td>
+			<td id="o43">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>44</td>
+			<td>Butter 500 Gms.</td>
+			<td><input type="text" id="mor44" /></td>
+			<td><input type="text" id="af44" /></td>
+			<td><input type="text" id="ev44" /></td>
+			<td><input type="text" id="ost44" /></td>
+			<td id="r44">163.80</td>
+			<td id="o44">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>45</td>
+			<td>Butter 200 Gms.</td>
+			<td><input type="text" id="mor45" /></td>
+			<td><input type="text" id="af45" /></td>
+			<td><input type="text" id="ev45" /></td>
+			<td><input type="text" id="ost45" /></td>
+			<td id="r45">68.40</td>
+			<td id="o45">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>46</td>
+			<td>Butter 100 Gms.</td>
+			<td><input type="text" id="mor46" /></td>
+			<td><input type="text" id="af46" /></td>
+			<td><input type="text" id="ev46" /></td>
+			<td><input type="text" id="ost46" /></td>
+			<td id="r46">0.0</td>
+			<td id="o46">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>47</td>
+			<td>D Whiterner 1Kg.</td>
+			<td><input type="text" id="mor47" /></td>
+			<td><input type="text" id="af47" /></td>
+			<td><input type="text" id="ev47" /></td>
+			<td><input type="text" id="ost47" /></td>
+			<td id="r47">268.18</td>
+			<td id="o47">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>48</td>
+			<td>D Whiterner 500 Gms.</td>
+			<td><input type="text" id="mor48" /></td>
+			<td><input type="text" id="af48" /></td>
+			<td><input type="text" id="ev48" /></td>
+			<td><input type="text" id="ost48" /></td>
+			<td id="r48">131.82</td>
+			<td id="o48">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>49</td>
+			<td>D Whiterner 200 Gms.</td>
+			<td><input type="text" id="mor49" /></td>
+			<td><input type="text" id="af49" /></td>
+			<td><input type="text" id="ev49" /></td>
+			<td><input type="text" id="ost49" /></td>
+			<td id="r49">53.64</td>
+			<td id="o49">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>50</td>
+			<td>D Whiterner 40 Gms.</td>
+			<td><input type="text" id="mor50" /></td>
+			<td><input type="text" id="af50" /></td>
+			<td><input type="text" id="ev50" /></td>
+			<td><input type="text" id="ost50" /></td>
+			<td id="r50">10.62</td>
+			<td id="o50">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+
+		<tr>
+			<td>51</td>
+			<td>D Whiterner 20 Gms.</td>
+			<td><input type="text" id="mor51" /></td>
+			<td><input type="text" id="af51" /></td>
+			<td><input type="text" id="ev51" /></td>
+			<td><input type="text" id="ost51" /></td>
+			<td id="r51">5.31</td>
+			<td id="o51">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>52</td>
+			<td>Cokes 150 Gms.</td>
+			<td><input type="text" id="mor52" /></td>
+			<td><input type="text" id="af52" /></td>
+			<td><input type="text" id="ev52" /></td>
+			<td><input type="text" id="ost52" /></td>
+			<td id="r52">31.77</td>
+			<td id="o52">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>53</td>
+			<td>Cokes 100 Gms.</td>
+			<td><input type="text" id="mor53" /></td>
+			<td><input type="text" id="af53" /></td>
+			<td><input type="text" id="ev53" /></td>
+			<td><input type="text" id="ost53" /></td>
+			<td id="r53">22.50</td>
+			<td id="o53">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>54</td>
+			<td>Cokes 10 Gms.</td>
+			<td><input type="text" id="mor54" /></td>
+			<td><input type="text" id="af54" /></td>
+			<td><input type="text" id="ev54" /></td>
+			<td><input type="text" id="ost54" /></td>
+			<td id="r54">4.45</td>
+			<td id="o54">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>55</td>
+			<td>Cova 1Kg.</td>
+			<td><input type="text" id="mor55" /></td>
+			<td><input type="text" id="af55" /></td>
+			<td><input type="text" id="ev55" /></td>
+			<td><input type="text" id="ost55" /></td>
+			<td id="r55">233.50</td>
+			<td id="o55">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+
+		<tr>
+			<td>56</td>
+			<td>Chocklets 1Rs.</td>
+			<td><input type="text" id="mor56" /></td>
+			<td><input type="text" id="af56" /></td>
+			<td><input type="text" id="ev56" /></td>
+			<td><input type="text" id="ost56" /></td>
+			<td id="r56">20.26</td>
+			<td id="o56">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>57</td>
+			<td>ChitChat 5Rs.</td>
+			<td><input type="text" id="mor57" /></td>
+			<td><input type="text" id="af57" /></td>
+			<td><input type="text" id="ev57" /></td>
+			<td><input type="text" id="ost57" /></td>
+			<td id="r57">20.26</td>
+			<td id="o57">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+
+		<tr>
+			<td>58</td>
+			<td>GoodLife 5Rs.</td>
+			<td><input type="text" id="mor58" /></td>
+			<td><input type="text" id="af58" /></td>
+			<td><input type="text" id="ev58" /></td>
+			<td><input type="text" id="ost58" /></td>
+			<td id="r58">20.26</td>
+			<td id="o58">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+
+		<tr>
+			<td>59</td>
+			<td>Cremebit chochleets 10Rs.</td>
+			<td><input type="text" id="mor59" /></td>
+			<td><input type="text" id="af59" /></td>
+			<td><input type="text" id="ev59" /></td>
+			<td><input type="text" id="ost59" /></td>
+			<td id="r59">20.26</td>
+			<td id="o59">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>60</td>
+			<td>GoodLife 5Rs.</td>
+			<td><input type="text" id="mor60" /></td>
+			<td><input type="text" id="af60" /></td>
+			<td><input type="text" id="ev60" /></td>
+			<td><input type="text" id="ost60" /></td>
+			<td id="r60">20.26</td>
+			<td id="o60">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+		<tr>
+			<td>61</td>
+			<td>Goodlife 100 M. I.</td>
+			<td><input type="text" id="mor61" /></td>
+			<td><input type="text" id="af61" /></td>
+			<td><input type="text" id="ev61" /></td>
+			<td><input type="text" id="ost61" /></td>
+			<td id="r61">5</td>
+			<td id="o61">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+		<tr>
+			<td>62
+			<td>Total Amount</td>
+			<td id="fi">0</td>
+			<td id="sec">0</td>
+			<td id="th">0</td>
+			<td id="fo">0</td>
+			<td id="fiv"></td>
+			<td id="six">0.00</td>
+		</tr>
+		</tr>
+		</tr>
+
+
+	</table>
+	<div style="clear: both;"></div>
+	<br>
+	<br>
+
+	<div id="err" style="color: red;" align="center"></div>
+	<br>
+	<br>
+
+	<div align="center">
+		<input class="btn-primary" style="color: black;" type="button"
+			value="Result" OnClick="findValue();" />
+	</div>
+	<div
+		style="display: block; font-family: cursive; font-weight: bold; font-style: oblique; clear: both;"
+		align="center" id="savediv">
+		Name Save:<input type="text"
+			style="font-family: serif; font-style: oblique; width: 15em; margin-left: 2px"
+			maxlength="10" name="nsave" />
+	</div>
+	<div align="center">
+		<input type="button" value="save"
+			style="margin-left: 2px; clear: both; margin-top: 2em; serif; font-stretch: normal; width: 25em;"
+			class="btn-primary" onclick="SaveValue();" />
+	</div>
+
+
+	<div align="center">
+		<div id="img" style="display: none;">
+			<span>Please Wait.......</span>
+			<div id="infinity" align="center" style="width: 2cm; height: 2cm"></div>
+		</div>
+	</div>
+</body>
+</html>
